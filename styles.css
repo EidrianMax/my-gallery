@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-1: #4e5150;
+  --color-2: #a9a9a9;
+  --color-3: #e5e5e5;
+  --color-4: #bdbdbd;
+  --color-5: #b9bdcf;
+  --font: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 2rem;
+  padding-block: 2rem 1rem;
+}
+
+.profile-avatar {
+  width: 100px;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+.profile-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-1);
+  text-align: center;
+}
+
+.profile-place {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-2);
+}
+
+.profile-data {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.profile-data-item {
+  width: 100px;
+  padding: 1rem;
+  background-color: var(--color-3);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-data-item-value {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-1);
+}
+
+.profile-data-item-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-4);
+}
+
+.profile-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /* grid-auto-flow: dense; */
+}
+
+.profile-photo {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo:nth-child(2) {
+  grid-column: span 2;
+}
+
+.profile-photo:nth-child(3) {
+  grid-column: span 2;
+}
+
+.profile-photo:nth-child(4) {
+  grid-row: span 2;
+}
+
+.footer {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-5);
+}
+
+.footer-user {
+  color: inherit;
+  font-weight: 700;
+}
+
+.footer-page {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-place {
+    font-size: 0.875rem;
+  }
+
+  .profile-data-item-value {
+    font-size: 1.125rem;
+  }
+
+  .profile-data-item-name {
+    font-size: 0.875rem;
+  }
+}
