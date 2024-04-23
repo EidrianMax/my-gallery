@@ -11,6 +11,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -26,6 +27,29 @@ img {
   max-width: 100%;
 }
 
+/* Layout */
+main .avatar {
+  margin-inline: auto;
+  margin-block-end: 1rem;
+}
+
+main .user-name {
+  margin-block-end: 0.25rem;
+  text-align: center;
+}
+
+main .user-place {
+  margin-block-end: 1rem;
+}
+
+main .user-data {
+  margin-block-end: 1rem;
+}
+
+main .gallery {
+  margin-block-end: 1rem;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -33,35 +57,14 @@ img {
   padding-block: 2rem 1rem;
 }
 
-.profile-avatar {
+/* Components */
+.avatar {
   width: 100px;
   border-radius: 1rem;
-  margin: 0 auto;
 }
 
-.profile-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-1);
-  text-align: center;
-}
-
-.profile-place {
-  font-size: 0.625rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--color-2);
-}
-
-.profile-data {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.profile-data-item {
-  width: 100px;
+.box-data {
+  display: inline-block;
   padding: 1rem;
   background-color: var(--color-3);
   border-radius: 0.75rem;
@@ -71,41 +74,40 @@ img {
   align-items: center;
 }
 
-.profile-data-item-value {
+.box-data-value {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-1);
 }
 
-.profile-data-item-name {
+.box-data-name {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-4);
 }
 
-.profile-photos {
+.gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  /* grid-auto-flow: dense; */
 }
 
-.profile-photo {
+.gallery-item {
   border-radius: 1rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.profile-photo:nth-child(2) {
+.gallery-item:nth-child(2) {
   grid-column: span 2;
 }
 
-.profile-photo:nth-child(3) {
+.gallery-item:nth-child(3) {
   grid-column: span 2;
 }
 
-.profile-photo:nth-child(4) {
+.gallery-item:nth-child(4) {
   grid-row: span 2;
 }
 
@@ -116,40 +118,67 @@ img {
   color: var(--color-5);
 }
 
-.footer-user {
+.footer-username-link {
   color: inherit;
   font-weight: 700;
 }
 
-.footer-page {
+.footer-oficial-page {
   text-decoration: none;
   color: inherit;
 }
 
+/* Specific Styles */
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-1);
+}
+
+.user-place {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-2);
+}
+
+.user-data {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.user-data > * {
+  min-width: 100px;
+}
+
+/* Tablets */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
 
+/* Desktop */
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
 
-  .profile-name {
+  .user-name {
     font-size: 1.5rem;
   }
 
-  .profile-place {
+  .user-place {
     font-size: 0.875rem;
   }
 
-  .profile-data-item-value {
+  .box-data-value {
     font-size: 1.125rem;
   }
 
-  .profile-data-item-name {
+  .box-data-name {
     font-size: 0.875rem;
   }
 }
